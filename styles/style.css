@@ -1,0 +1,187 @@
+:root {
+  --bg: #f4f6f9;
+  --text: #222;
+  --muted: #555;
+  --card-radius: 18px;
+  --shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Cantarell", "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  background: white;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.nav button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Barra de pesquisa */
+.search-row {
+  padding: 12px 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+.search-row.hidden {
+  display: none;
+}
+#search {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--card-radius);
+  border: 2px solid #ccc;
+  font-size: 1rem;
+}
+#search:focus {
+  border-color: #4a90e2;
+}
+
+/* Carrossel de destaque */
+.carousel {
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.carousel-card {
+  min-width: 100%;
+  height: 300px;
+  flex: 0 0 100%;
+  padding: 30px;
+  border-radius: var(--card-radius);
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-card h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.carousel-card p {
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+/* Grid de apps */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.card {
+  border-radius: var(--card-radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.card h2 {
+  margin-bottom: 6px;
+  font-size: 1.3rem;
+}
+.desc {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+.card ul {
+  margin-left: 18px;
+  margin-bottom: 16px;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Rodapé */
+.footer {
+  margin: 30px 0 60px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Cores diferentes */
+.card[data-name="notion"] {
+  background: linear-gradient(135deg, #7b5cff, #8e44ad);
+}
+.card[data-name="office"] {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+.card[data-name="photoshop"] {
+  background: linear-gradient(135deg, #00aaff, #0055cc);
+}
