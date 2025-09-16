@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alternativas Open Source</title>
   <link rel="stylesheet" href="./styles/pages/index/index.css" />
+</head>
 <body>
 
   <!-- Header fixo -->
@@ -15,8 +16,13 @@
         <button id="search-btn" aria-label="Pesquisar">🔍</button>
       </nav>
     </div>
+
     <div id="search-bar" class="search-row hidden">
-      <input id="search" type="search" placeholder="Pesquisar aplicativo (ex: Spotify, Photoshop, Notion)" aria-label="Pesquisar alternativas">
+      <input 
+        id="search" 
+        type="search" 
+        placeholder="Pesquisar aplicativo (ex: Spotify, Photoshop, Notion)" 
+        aria-label="Pesquisar alternativas">
     </div>
   </header>
 
@@ -25,6 +31,7 @@
     <!-- Carrossel -->
     <section class="carousel">
       <div class="carousel-track">
+
         <article class="carousel-card" style="background: linear-gradient(135deg, #1db954, #1aa34a)">
           <h2>Spotify</h2>
           <p>Lollypop • Funkwhale • Lidarr</p>
@@ -44,8 +51,33 @@
           <h2>Photoshop</h2>
           <p>GIMP • Krita • Inkscape</p>
         </article>
+
       </div>
     </section>
+
+    <!-- Categorias -->
+    <section id="category-setup" class="setup">
+      <h2>Escolha a categoria</h2>
+
+      <div class="categories">
+        <div class="dropdown">
+    <button class="category-btn" data-category="os">Sistemas Operacionais ▾</button>
+    <div class="dropdown-content">
+      <a href="windows.html">Windows</a>
+      <a href="linux.html">Linux</a>
+      <a href="macos.html">macOS</a>
+    </div>
+  
+  <div class="dropdown">
+    <button class="category-btn" data-category="multimedia">mobile ▾</button>
+    <div class="dropdown-content">
+      <a href="Android.html">Android</a>
+      <a href="iOS.html">iOS</a>
+    </div>
+  </div>
+
+  </div>
+</div>
 
     <!-- Grid de aplicativos -->
     <section id="cards" class="grid">
@@ -84,9 +116,11 @@
 
     </section>
 
+    <!-- Rodapé -->
     <footer class="footer">
       <p>Feito para demonstração • Pode clonar e abrir um PR com mais alternativas.</p>
     </footer>
+
   </main>
 
   <!-- Script externo -->

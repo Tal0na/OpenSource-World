@@ -3,11 +3,16 @@
   --text: #222;
   --muted: #555;
   --card-radius: 18px;
-  --shadow: 0 4px 14px rgba(0,0,0,0.1);
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Cantarell", "Inter", system-ui, sans-serif;
   background: var(--bg);
@@ -30,15 +35,18 @@ body {
   top: 0;
   z-index: 1000;
 }
+
 .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
 }
+
 .nav button {
   background: none;
   border: none;
@@ -52,9 +60,11 @@ body {
   background: #f9f9f9;
   border-top: 1px solid #ddd;
 }
+
 .search-row.hidden {
   display: none;
 }
+
 #search {
   width: 100%;
   padding: 10px 14px;
@@ -62,11 +72,12 @@ body {
   border: 2px solid #ccc;
   font-size: 1rem;
 }
+
 #search:focus {
   border-color: #4a90e2;
 }
 
-/* Carrossel de destaque */
+/* Carrossel */
 .carousel {
   margin: 40px 0;
   position: relative;
@@ -97,6 +108,7 @@ body {
   margin-bottom: 10px;
   font-size: 2rem;
 }
+
 .carousel-card p {
   max-width: 600px;
   opacity: 0.9;
@@ -107,7 +119,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   border: none;
   color: white;
   font-size: 2rem;
@@ -116,17 +128,26 @@ body {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .carousel-btn:hover {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-/* Grid de apps */
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
+
 .card {
   border-radius: var(--card-radius);
   padding: 20px;
@@ -134,19 +155,23 @@ body {
   color: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
+
 .card h2 {
   margin-bottom: 6px;
   font-size: 1.3rem;
 }
+
 .desc {
   font-size: 0.95rem;
   margin-bottom: 12px;
   opacity: 0.9;
 }
+
 .card ul {
   margin-left: 18px;
   margin-bottom: 16px;
@@ -163,6 +188,7 @@ body {
   color: white;
   transition: background 0.2s;
 }
+
 .btn:hover {
   background: rgba(255, 255, 255, 0.35);
 }
@@ -175,13 +201,94 @@ body {
   font-size: 0.9rem;
 }
 
-/* Cores diferentes */
+/* Cores */
 .card[data-name="notion"] {
   background: linear-gradient(135deg, #7b5cff, #8e44ad);
 }
+
 .card[data-name="office"] {
   background: linear-gradient(135deg, #f39c12, #e67e22);
 }
+
 .card[data-name="photoshop"] {
   background: linear-gradient(135deg, #00aaff, #0055cc);
+}
+
+/* Categorias */
+/* Container das categorias */
+.categories {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botões principais já estilizados */
+.category-btn {
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease;
+}
+
+/* Conteúdo do dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #fff;
+  min-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  overflow: hidden;
+}
+
+
+/* Links dentro do dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background: #f0f0f0;
+}
+
+/* Mostrar o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Efeitos por categoria */
+.category-btn[data-category="office"] {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+.category-btn[data-category="browser"] {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+.category-btn[data-category="multimedia"] {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+.category-btn[data-category="os"] {
+  background: linear-gradient(135deg, #7b5cff, #8e44ad);
 }
