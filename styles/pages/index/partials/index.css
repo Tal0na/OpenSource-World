@@ -14,7 +14,6 @@
 }
 
 body {
-  font-family: "Cantarell", "Inter", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -258,7 +257,6 @@ body {
   z-index: 10;
   overflow: hidden;
 }
-
 
 /* Links dentro do dropdown */
 .dropdown-content a {
