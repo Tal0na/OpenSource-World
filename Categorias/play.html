@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categoria: Play</title>
+    <link rel="stylesheet" href="styles/play.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Categoria: Play</h1>
+      <p>Apps open source para música e entretenimento 🎶</p>
+    </header>
+
+    <!-- filtros -->
+    <section id="filters">
+      <h2>Filtrar por plataforma:</h2>
+      <label><input type="checkbox" value="x86" /> x86</label>
+      <label><input type="checkbox" value="x64" /> x64</label>
+      <label><input type="checkbox" value="ARM" /> ARM</label>
+      <label><input type="checkbox" value="Windows" /> Windows</label>
+      <label><input type="checkbox" value="Linux" /> Linux</label>
+      <label><input type="checkbox" value="MacOS" /> MacOS</label>
+    </section>
+
+    <!-- cards -->
+    <main>
+      <section id="cards" class="grid"></section>
+    </main>
+
+    <script src="/scripts/play.js"></script>
+  </body>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</html>

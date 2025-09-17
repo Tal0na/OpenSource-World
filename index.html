@@ -1,129 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alternativas Open Source</title>
-  <link rel="stylesheet" href="./styles/pages/index/index.css" />
-</head>
-<body>
-
-  <!-- Header fixo -->
-  <header class="site-header">
-    <div class="container header-flex">
-      <h1 class="logo">Alternativas Open Source</h1>
-      <nav class="nav">
-        <button id="search-btn" aria-label="Pesquisar">🔍</button>
-      </nav>
-    </div>
-
-    <div id="search-bar" class="search-row hidden">
-      <input 
-        id="search" 
-        type="search" 
-        placeholder="Pesquisar aplicativo (ex: Spotify, Photoshop, Notion)" 
-        aria-label="Pesquisar alternativas">
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- Carrossel -->
-    <section class="carousel">
-      <div class="carousel-track">
-
-        <article class="carousel-card" style="background: linear-gradient(135deg, #1db954, #1aa34a)">
-          <h2>Spotify</h2>
-          <p>Lollypop • Funkwhale • Lidarr</p>
-        </article>
-
-        <article class="carousel-card" style="background: linear-gradient(135deg, #f39c12, #e67e22)">
-          <h2>Office</h2>
-          <p>LibreOffice • OnlyOffice</p>
-        </article>
-
-        <article class="carousel-card" style="background: linear-gradient(135deg, #7b5cff, #8e44ad)">
-          <h2>Notion</h2>
-          <p>Joplin • Trilium • Obsidian</p>
-        </article>
-
-        <article class="carousel-card" style="background: linear-gradient(135deg, #00aaff, #0055cc)">
-          <h2>Photoshop</h2>
-          <p>GIMP • Krita • Inkscape</p>
-        </article>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alternativas Open Source</title>
+    <link rel="stylesheet" href="./styles/pages/index/index.css" />
+  </head>
+  <body>
+    <!-- Header fixo -->
+    <header class="site-header">
+      <div class="container header-flex">
+        <h1 class="logo">Alternativas Open Source</h1>
+        <nav class="nav">
+          <button id="search-btn" aria-label="Pesquisar">🔍</button>
+        </nav>
       </div>
-    </section>
 
-    <!-- Categorias -->
-    <section id="category-setup" class="setup">
-      <h2>Escolha a categoria</h2>
+      <div id="search-bar" class="search-row hidden">
+        <input
+          id="search"
+          type="search"
+          placeholder="Pesquisar aplicativo (ex: Spotify, Photoshop, Notion)"
+          aria-label="Pesquisar alternativas"
+        />
+      </div>
+    </header>
 
-      <div class="categories">
-        <div class="dropdown">
-    <button class="category-btn" data-category="os">Sistemas Operacionais ▾</button>
-    <div class="dropdown-content">
-      <a href="windows.html">Windows</a>
-      <a href="linux.html">Linux</a>
-      <a href="macos.html">macOS</a>
-    </div>
-  
-  <div class="dropdown">
-    <button class="category-btn" data-category="multimedia">mobile ▾</button>
-    <div class="dropdown-content">
-      <a href="Android.html">Android</a>
-      <a href="iOS.html">iOS</a>
-    </div>
+    <main class="container">
+      <!-- Carrossel -->
+      <section class="carousel">
+        <div class="carousel-track">
+          <article
+            class="carousel-card"
+            style="background: linear-gradient(135deg, #1db954, #1aa34a)"
+          >
+            <h2>Spotify</h2>
+            <p>Lollypop • Funkwhale • Lidarr</p>
+          </article>
+
+          <article
+            class="carousel-card"
+            style="background: linear-gradient(135deg, #f39c12, #e67e22)"
+          >
+            <h2>Office</h2>
+            <p>LibreOffice • OnlyOffice</p>
+          </article>
+
+          <article
+            class="carousel-card"
+            style="background: linear-gradient(135deg, #7b5cff, #8e44ad)"
+          >
+            <h2>Notion</h2>
+            <p>Joplin • Trilium • Obsidian</p>
+          </article>
+
+          <article
+            class="carousel-card"
+            style="background: linear-gradient(135deg, #00aaff, #0055cc)"
+          >
+            <h2>Photoshop</h2>
+            <p>GIMP • Krita • Inkscape</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Categorias -->
+      <section id="category-setup" class="setup">
+
+       <div class="categories">
+    <a href="categorias/play.html" class="category-btn">Play</a>
+    <a href="categorias/develop.html" class="category-btn">Develop</a>
+    <a href="categorias/learning.html" class="category-btn">Learning</a>
+    <a href="categorias/work.html" class="category-btn">Work</a>
+    <a href="categorias/socialize.html" class="category-btn">Socialize</a>
+    <a href="categorias/create.html" class="category-btn">Create</a>
   </div>
+ <p class="editor-choice">✨ Escolha do Editor</p>
+      <!-- Grid de aplicativos -->
+      <section id="cards" class="grid">
+        
+        <article class="card" data-name="notion" data-category="produtividade">
+          <h2>Notion</h2>
+          <p class="desc">Notas, wikis e gerenciamento de conhecimento.</p>
+          <ul>
+            <li><strong>Obsidian</strong> — Markdown local.</li>
+            <li><strong>Joplin</strong> — notas com sincronização.</li>
+            <li><strong>Trilium</strong> — wiki pessoal com hierarquia.</li>
+          </ul>
+          <a class="btn" href="#">Ver mais</a>
+        </article>
+        
 
-  </div>
-</div>
+        <article class="card" data-name="office" data-category="produtividade">
+          <h2>Microsoft Office</h2>
+          <p class="desc">Suites de escritório open source.</p>
+          <ul>
+            <li><strong>LibreOffice</strong> — suíte completa.</li>
+            <li><strong>OnlyOffice</strong> — colaboração online.</li>
+          </ul>
+          <a class="btn" href="#">Ver mais</a>
+        </article>
+        <article class="card" data-name="spotify" data-category="play">
+          <h2>Spotify</h2>
+          <p class="desc">Streaming de música e podcasts.</p>
+          <ul>
+            <li><strong>Lollypop</strong> — player de música GTK.</li>
+            <li><strong>Funkwhale</strong> — servidor de música.</li>
+            <li><strong>Lidarr</strong> — gerenciador de música.</li>
+          </ul>
+          <a class="btn" href="#">Ver mais</a>
+        </article>
+       
+        <article class="card" data-name="photoshop" data-category="create">
+          <h2>Photoshop</h2>
+          <p class="desc">Edição e pintura digital.</p>
+          <ul>
+            <li><strong>GIMP</strong> — edição raster.</li>
+            <li><strong>Krita</strong> — pintura digital.</li>
+            <li><strong>Inkscape</strong> — edição vetorial.</li>
+          </ul>
+          <a class="btn" href="#">Ver mais</a>
+        </article>  
 
-    <!-- Grid de aplicativos -->
-    <section id="cards" class="grid">
+      </section>
 
-      <article class="card" data-name="notion">
-        <h2>Notion</h2>
-        <p class="desc">Notas, wikis e gerenciamento de conhecimento.</p>
-        <ul>
-          <li><strong>Obsidian</strong> — Markdown local.</li>
-          <li><strong>Joplin</strong> — notas com sincronização.</li>
-          <li><strong>Trilium</strong> — wiki pessoal com hierarquia.</li>
-        </ul>
-        <a class="btn" href="#">Ver mais</a>
-      </article>
+      <!-- Rodapé -->
+      <footer class="footer">
+        <p>
+          Feito para demonstração • Pode clonar e abrir um PR com mais
+          alternativas.
+        </p>
+      </footer>
+    </main>
 
-      <article class="card" data-name="office">
-        <h2>Microsoft Office</h2>
-        <p class="desc">Suites de escritório open source.</p>
-        <ul>
-          <li><strong>LibreOffice</strong> — suíte completa.</li>
-          <li><strong>OnlyOffice</strong> — colaboração online.</li>
-        </ul>
-        <a class="btn" href="#">Ver mais</a>
-      </article>
-
-      <article class="card" data-name="photoshop">
-        <h2>Photoshop</h2>
-        <p class="desc">Edição e pintura digital.</p>
-        <ul>
-          <li><strong>GIMP</strong> — edição raster.</li>
-          <li><strong>Krita</strong> — pintura digital.</li>
-          <li><strong>Inkscape</strong> — edição vetorial.</li>
-        </ul>
-        <a class="btn" href="#">Ver mais</a>
-      </article>
-
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-      <p>Feito para demonstração • Pode clonar e abrir um PR com mais alternativas.</p>
-    </footer>
-
-  </main>
-
-  <!-- Script externo -->
-  <script src="scripts/main.js"></script>
-</body>
+    <!-- Script externo -->
+    <script src="scripts/main.js"></script>
+  </body>
 </html>

@@ -1,27 +1,52 @@
-// === Pesquisa ===
-const searchBtn = document.getElementById("search-btn")
-const searchBar = document.getElementById("search-bar")
-const searchInput = document.getElementById("search")
-const cards = document.querySelectorAll(".card")
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.getElementById("search-btn");
+  const searchBar = document.getElementById("search-bar");
+  const searchInput = document.getElementById("search");
+  const categoryButtons = document.querySelectorAll(".category-btn");
+  const cards = document.querySelectorAll(".card");
 
-// Mostra/esconde a barra de pesquisa
-searchBtn.addEventListener("click", () => {
-  searchBar.classList.toggle("hidden")
-  if (!searchBar.classList.contains("hidden")) {
-    searchInput.focus()
+  let activeCategory = "";
+
+  // Mostra/esconde a barra de pesquisa
+  searchBtn.addEventListener("click", () => {
+    searchBar.classList.toggle("hidden");
+    searchInput.focus();
+  });
+
+  // Função de filtro
+  function filtrar() {
+    const texto = searchInput.value.toLowerCase();
+
+    cards.forEach(card => {
+      const nome = card.dataset.name?.toLowerCase() || "";
+      const desc = card.querySelector(".desc")?.textContent.toLowerCase() || "";
+      const categoria = card.dataset.category || "";
+
+      const combinaTexto = nome.includes(texto) || desc.includes(texto);
+      const combinaCategoria = !activeCategory || categoria === activeCategory;
+
+      if (combinaTexto && combinaCategoria) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
   }
-})
 
-// Filtro de busca
-searchInput.addEventListener("input", (e) => {
-  const q = e.target.value.trim().toLowerCase()
-  cards.forEach((card) => {
-    const name = card.dataset.name || ""
-    const text = card.innerText.toLowerCase()
-    const visible = q === "" || name.includes(q) || text.includes(q)
-    card.style.display = visible ? "" : "none"
-  })
-})
+  // Filtro por pesquisa
+  searchInput.addEventListener("input", filtrar);
+
+  // Filtro por categoria
+  categoryButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      activeCategory = btn.dataset.category;
+      filtrar();
+    });
+  });
+
+  // Render inicial
+  filtrar();
+});
 
 // === Carrossel com um card por vez ===
 const track = document.querySelector(".carousel-track")

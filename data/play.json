@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Lollypop",
+    "description": "Player de música moderno para Linux.",
+    "stars": 2100,
+    "github": "https://github.com/gnumdk/lollypop",
+    "downloads": {
+      "Linux": "https://wiki.gnome.org/Apps/Lollypop/Downloading"
+    },
+    "platforms": ["Linux", "x86", "x64", "ARM"]
+  },
+  {
+    "name": "Funkwhale",
+    "description": "Servidor e streaming de música descentralizado.",
+    "stars": 1400,
+    "github": "https://github.com/funkwhale/funkwhale",
+    "downloads": {
+      "Linux": "https://funkwhale.audio/en_US/download/"
+    },
+    "platforms": ["Linux", "ARM", "x86", "x64"]
+  }
+]

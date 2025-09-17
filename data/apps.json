@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Music Player",
+    "descricao": "Reprodutor de música open source para Android.",
+    "so": "mobile",
+    "categoria": "musica"
+  },
+  {
+    "nome": "Code Editor",
+    "descricao": "Editor de código para Linux e Windows.",
+    "so": "x86",
+    "categoria": "produtividade"
+  },
+  {
+    "nome": "Home Server",
+    "descricao": "Servidor doméstico para Raspberry Pi.",
+    "so": "arm",
+    "categoria": "servidores"
+  }
+]
