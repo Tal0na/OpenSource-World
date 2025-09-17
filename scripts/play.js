@@ -2,7 +2,7 @@ const cardsContainer = document.getElementById("cards");
 
 // Função para carregar o JSON externamente
 async function loadApps() {
-  const response = await fetch("/data/play.json"); // ou "data/play.json"
+  const response = await fetch("../data/play.json"); // ou "data/play.json"
   const apps = await response.json();
   return apps;
 }
